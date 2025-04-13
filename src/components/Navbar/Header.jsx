@@ -14,8 +14,11 @@ const Header = ({ toggleNav, isNavOpen }) => {
             alt="Easy Cargo Logo"
             className="h-12 lg:h-20 w-auto mix-blend-multiply"
           />
-          <span className="text-2xl md:text-3xl lg:text-4xl tracking-wider text-[#1C70BA] font-bold">
-            Easy <span className="text-[#F4A91A]">Cargo</span>
+          <span className="text-md md:text-xl lg:text-2xl text-primary tracking-widest font-extrabold font-VazirBold block">
+            مارکیت
+            <span className="text-tertiary text-4xl tracking-normal font-bold block">
+              حیسن زاده
+            </span>
           </span>
         </div>
 
@@ -23,39 +26,39 @@ const Header = ({ toggleNav, isNavOpen }) => {
         <div className="hidden lg:flex gap-x-10">
           {/* Location */}
           <div className="flex items-center gap-x-4">
-            <FaLocationDot className="text-3xl text-[#F4A91A]" />
+            <FaLocationDot className="text-3xl text-secondary" />
             <div className="flex flex-col items-start">
               <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">
-                Locations:
+                آدرس :
               </span>
-              <span className="text-lg font-semibold text-[#1C70BA]">
-                123 Street, City, Country
+              <span className="text-lg font-semibold text-primary">
+                دشت برچی , کابل، افغانستان
               </span>
             </div>
           </div>
 
           {/* Email */}
           <div className="flex items-center gap-x-4">
-            <MdEmail className="text-3xl text-[#F4A91A]" />
+            <MdEmail className="text-3xl text-secondary" />
             <div className="flex flex-col items-start">
               <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">
-                Email:
+                ایمیل :
               </span>
-              <span className="text-lg font-semibold text-[#1C70BA]">
-                info@easycargo.com
+              <span className="text-lg font-Poppins font-semibold text-primary">
+                info@hzcitycenter.com
               </span>
             </div>
           </div>
 
           {/* Phone */}
           <div className="flex items-center gap-x-4">
-            <MdAddIcCall className="text-3xl text-[#F4A91A]" />
+            <MdAddIcCall className="text-3xl text-secondary" />
             <div className="flex flex-col items-start">
               <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">
-                Phone:
+                تماس :
               </span>
-              <span className="text-lg font-semibold text-[#1C70BA]">
-                +1 234 567 890
+              <span dir="ltr" className="text-lg font-semibold text-primary">
+                +93-700-000-000
               </span>
             </div>
           </div>

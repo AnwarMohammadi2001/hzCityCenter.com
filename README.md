@@ -1,12 +1,32 @@
-# React + Vite
+# Hussainzada Commercial Market Website 🏬
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive website built for **Hussainzada Commercial Market** — a multifunctional commercial complex that includes jewelry shops, textile stores, tailoring services, cosmetics, company offices, and residential rooms.
 
-Currently, two official plugins are available:
+## 🌐 Live Preview
+Coming Soon...
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 📌 Features
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 🛍️ **Shops Section** – Gold, Textile, Tailoring, Cosmetics
+- 🏢 **Company Offices** – Pages for listing and describing office units
+- 🏠 **Residential Rooms** – Information and inquiry forms for rental rooms
+- 🔍 **Search Functionality** – Search by shop name or category
+- 🗺️ **Interactive Map** – See the location of each shop/office within the market
+- 📱 **Responsive Design** – Fully optimized for mobile, tablet, and desktop
+- 🌙 **Dark/Light Mode** (optional)
+- 📞 **Contact & Inquiry Forms** – Reach out to management easily
+
+---
+
+## 🛠️ Tech Stack
+
+| Frontend        | Backend (Optional) | CMS / Hosting       |
+|----------------|--------------------|----------------------|
+| React + Tailwind CSS | Django / Node.js / Firebase *(optional)* | WordPress *(optional alternative)* or GitHub Pages |
+
+---
+
+## 📂 Project Structure
+

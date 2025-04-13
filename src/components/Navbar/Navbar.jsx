@@ -3,14 +3,15 @@ import { FaSun, FaMoon, FaGlobe } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleDarkMode } from "../../redux/darkModeSlice";
 import { toggleLanguage } from "../../redux/languageSlice";
+import { FaUser } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const navItems = [
-  { id: 1, name: "Home", path: "#" },
-  { id: 2, name: "About Us", path: "#about" },
-  { id: 3, name: "Services", path: "#services" },
-  { id: 4, name: "Sightseeing Trips", path: "#sightseeing-trips" },
-  { id: 5, name: "Image Gallery", path: "#gallery" },
-  { id: 6, name: "Contact Us", path: "#contact" },
+  { id: 1, name: "صفحه اصلی", path: "#" },
+  { id: 2, name: "درباره ما", path: "#about" },
+  { id: 3, name: "فروشگاه‌ها ", path: "#stors" },
+  { id: 4, name: "گالری ", path: "#gallary" },
+  { id: 5, name: "تماس با ما", path: "#contact" },
 ];
 
 const Navbar = ({ isNavOpen, toggleNav }) => {
@@ -41,36 +42,42 @@ const Navbar = ({ isNavOpen, toggleNav }) => {
           {navItems.map((item) => (
             <li
               key={item.id}
-              className="hover:text-amber-400 relative dark:text-amber-500 text-[16px] group cursor-pointer"
+              className="relative text-[18px] group cursor-pointer"
             >
               <a
                 href={item.path}
-                className="text-amber-50 hover:text-amber-400"
+                className="text-white font-bold dark:text-amber-300 hover:text-amber-400 dark:hover:text-amber-500"
               >
                 {item.name}
               </a>
-              <span className="absolute h-[2px] left-0 w-full -bottom-1 scale-x-0 group-hover:scale-x-100 group-hover:origin-left origin-right bg-amber-500 dark:bg-amber-500 transition-transform duration-500"></span>
+              <span className="absolute h-[2px] left-0 w-full -bottom-1 scale-x-0 group-hover:scale-x-100 group-hover:origin-left origin-right bg-amber-500 dark:bg-amber-400 transition-transform duration-500"></span>
             </li>
           ))}
         </ul>
 
         {/* Icons */}
         <div className="flex space-x-4">
+          {/* Dark Mode and Light Mode Toggle */}
           {darkMode ? (
             <FaSun
-              className={`w-6 h-6 cursor-pointer ${iconClass}`}
+              className={`w-8 h-8 cursor-pointer p-2 rounded-full ${iconClass} bg-amber-300 text-gray-800 dark:bg-amber-500 dark:text-white transition-colors duration-500`}
               onClick={() => dispatch(toggleDarkMode())}
             />
           ) : (
             <FaMoon
-              className={`w-6 h-6 cursor-pointer ${iconClass}`}
+              className={`w-8 h-8 cursor-pointer p-2 rounded-full ${iconClass} bg-amber-300 text-gray-800 dark:bg-amber-500 dark:text-white transition-colors duration-500`}
               onClick={() => dispatch(toggleDarkMode())}
             />
           )}
-          <FaGlobe
-            className={`w-6 h-6 cursor-pointer ${iconClass}`}
-            onClick={() => dispatch(toggleLanguage())}
-          />
+
+          {/* Login Icon */}
+          <Link to="/login" className="">
+            {" "}
+            <FaUser
+              className={`w-8 h-8 cursor-pointer p-2 rounded-full ${iconClass} bg-amber-300 text-gray-800 dark:bg-amber-500 dark:text-white transition-colors duration-500`}
+              onClick={() => console.log("Navigate to login page")}
+            />
+          </Link>
         </div>
       </div>
 

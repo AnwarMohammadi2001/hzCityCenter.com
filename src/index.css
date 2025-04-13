@@ -10,14 +10,25 @@
   font-family: Roboto;
   src: url("../src/assets/font/Roboto-Regular.ttf");
 }
+@font-face {
+  font-family: Vazir;
+  src: url("../src/assets/fonts/Vazirmatn-Black.ttf");
+}
+@font-face {
+  font-family: VazirBold;
+  src: url("../src/assets/fonts/Vazirmatn-Bold.ttf");
+}
 @import "tailwindcss";
 
 @theme {
   --font-Poppins: Poppins, "sans-serif";
   --font-Roboto: Roboto, "sans-serif";
   --font-Satisfy: Satisfy, "sans-serif";
-  --color-primary: #1c70ba;
-  --color-secondary: #f4a91a;
+  --font-Vazir: Vazir, "sans-serif";
+  --font-VazirBold: VazirBold, "sans-serif";
+  --color-primary: #00adf1;
+  --color-secondary: #2e3192;
+  --color-tertiary: #f4a91a;
   --breakpoint-3xl: 120rem;
   --color-avocado-100: oklch(0.99 0 0);
   --color-avocado-200: oklch(0.98 0.04 113.22);
@@ -34,8 +45,7 @@
 body {
   margin: 0;
   /* background-color: oklch(0.987 0.022 95.277); */
-  /* font-family: Roboto; */
-  font-size: 12px;
+  font-family: Vazir;
   scroll-behavior: smooth;
 }
 
