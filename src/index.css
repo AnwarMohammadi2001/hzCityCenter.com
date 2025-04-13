@@ -44,7 +44,7 @@
 
 body {
   margin: 0;
-  background-color: oklch(0.987 0.022 95.277);
+  /* background-color: oklch(0.987 0.022 95.277); */
   scroll-behavior: smooth;
 }
 

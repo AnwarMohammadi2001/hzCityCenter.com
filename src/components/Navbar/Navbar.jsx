@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const navItems = [
-    { id: 1, name: "صفحه اصلی", path: "/home" },
+    { id: 1, name: "صفحه اصلی", path: "/" },
     { id: 2, name: "درباره ما", path: "/about" },
     { id: 3, name: "فروشگاه‌ها", path: "/stores" },
     { id: 4, name: "گالری", path: "/gallery" },
