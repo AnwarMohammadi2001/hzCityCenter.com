@@ -1,8 +1,26 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { LuLogIn } from "react-icons/lu";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY;
+      if (offset > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const navItems = [
     { id: 1, name: "صفحه اصلی", path: "/" },
     { id: 2, name: "درباره ما", path: "/about" },
@@ -11,8 +29,12 @@ const Navbar = () => {
     { id: 5, name: "تماس با ما", path: "/contact" },
   ];
   return (
-    <div className="fixed top-0 w-full  md:px-10 lg:px-20  left-0 right-0 z-50">
-      <div className="flex justify-between items-center  p-4">
+    <div
+      className={`fixed top-0 w-full md:px-10 lg:px-20 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled ? "bg-white shadow-md z-50" : "bg-transparent"
+      }`}
+    >
+      <div className="flex justify-between items-center p-3">
         <div className="flex items-center gap-x-1">
           <img src="/hz.png" alt="logo" className="h-12 w-auto" />
           <div className="relative h-14 w-[120px] text-end">

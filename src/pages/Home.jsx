@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "../components/Navbar/Navbar";
 import HeroSection from "../components/hero/HeroSection";
-
+import Demo from "../components/hero/Demo";
 const Home = () => {
   return (
     <div className="">
@@ -10,6 +10,7 @@ const Home = () => {
       </header>
       <main className="mt-20">
         <HeroSection />
+        <Demo />
       </main>
     </div>
   );
