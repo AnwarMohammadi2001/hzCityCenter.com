@@ -1,17 +1,11 @@
 import React, { useState } from "react";
 import Navbar from "../components/Navbar/Navbar";
-import Header from "../components/Navbar/Header";
+
 const Home = () => {
-  const [isNavOpen, setIsNavOpen] = useState(false);
-
-  const toggleNav = () => setIsNavOpen((prev) => !prev);
-  const closeNav = () => setIsNavOpen(false);
-
   return (
-    <div className=" dark:bg-zinc-900 transition-colors duration-500">
-      <header className="w-full transition-colors duration-500">
-        <Header toggleNav={toggleNav} isNavOpen={isNavOpen} />
-        <Navbar isNavOpen={isNavOpen} toggleNav={closeNav} />
+    <div className="">
+      <header className="w-full px-5 md:px-10 lg:px-32 ">
+        <Navbar />
       </header>
       <main className=""></main>
     </div>
